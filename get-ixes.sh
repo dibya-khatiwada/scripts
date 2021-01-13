@@ -4,7 +4,7 @@
 usage () {
   echo "script usage: $(basename $0) [-c country_code] / [-r region ]"
   printf "\n"
-  echo "Pass the regions names with quotes : North America, Africa, Asia Pacific, Africa, South America "
+  echo "Pass the regions names with quotes : North America, Africa, Asia Pacific, Europe, South America "
   printf "\n"
   echo "OR"
   printf "\n"
