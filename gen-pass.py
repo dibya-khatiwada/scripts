@@ -3,8 +3,8 @@ import sys
 import argparse
 codeword = []
 parser = argparse.ArgumentParser(usage="python gen-password.py -l <length of the password>")
-parser.add_argument( '-l', '--length', type=int, help='Length of the password', required=False)
-parser.add_argument( '-s', '--steps', type=int, default=1, help='Steps to repeat for password generation', required=False)
+parser.add_argument( '-l', '--length', type=int, help='Length of the password', required=True)
+parser.add_argument( '-s', '--steps', type=int, default=1, help='Steps to repeat for password generation', required=True)
 
 args = parser.parse_args()
 
