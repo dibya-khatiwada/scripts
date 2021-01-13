@@ -14,10 +14,12 @@ if [ $# -eq 0 ]
     exit 0
 fi
 
+echo "## Fetching Data from peeringdb ##"
+
 id_first_peer=$(curl -sG https://peeringdb.com/api/net?asn=$1 | jq  -c '.data[] | [.id]' | sed 's/\[//;s/\]//')
 id_second_peer=$(curl -sG https://peeringdb.com/api/net?asn=$2 | jq  -c '.data[] | [.id]' | sed 's/\[//;s/\]//')
 
-echo "## Fetching Data from peeringdb ##"
+
 printf "\n"
 curl -sG https://peeringdb.com/api/netixlan --data-urlencode net_id__in=$id_first_peer \
 --data-urlencode ix_id__in=`curl -sG https://peeringdb.com/api/netixlan --data-urlencode net_id__in=$id_second_peer | 
