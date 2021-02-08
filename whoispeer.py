@@ -8,6 +8,8 @@
 ### pip3 install requests
 ### pip3 install prettytable
 
+## Replace pdb_username/pdb_pass with your account on peeringdb. 
+
 import json
 import sys
 import requests
