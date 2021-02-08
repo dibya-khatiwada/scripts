@@ -21,7 +21,6 @@ class Peer():
     def __init__(self, asn):
         self.asn=asn
 
-
     def get_org_details(self):
         local_url ='net?asn={}'.format(self.asn) 
         response = get_response(local_url)
@@ -49,7 +48,6 @@ class Peer():
             return data
         else:
             print("Unable to fetch the peering information")
-
 
 def get_response(local_url):
     master_url = 'https://www.peeringdb.com/api/'
