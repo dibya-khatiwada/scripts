@@ -14,7 +14,7 @@ import requests
 from prettytable import PrettyTable
 
 master_url = 'https://www.peeringdb.com/api/'
-auth = auth = requests.auth.HTTPBasicAuth('pdb_username', 'pdb_pass')
+auth = requests.auth.HTTPBasicAuth('pdb_username', 'pdb_pass')
 
 class Peer():
     def __init__(self, asn):
