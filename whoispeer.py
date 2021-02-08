@@ -83,7 +83,7 @@ def print_org_peeringData(org_peering_data):
             table.add_row([ix_name, asn, ipaddr4, ipaddr6])
         print(table)
     else:
-        print("No public peering infromation listed !!")
+        print("No public peering infromation listed !!\n")
 
 def main():
     p = Peer(sys.argv[1])
