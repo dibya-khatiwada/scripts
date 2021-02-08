@@ -6,7 +6,7 @@
 
 ## Requirements
 ### pip3 install requests
-### pip install prettytable
+### pip3 install prettytable
 
 import json
 import sys
