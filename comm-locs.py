@@ -18,7 +18,7 @@ def usage():
 
 def get_peer_details(asn):
     url = 'https://www.peeringdb.com/api/netixlan?asn={}'.format(asn)
-    print("Fetching data from peering DB, Can take a while.. ")
+    print(f"Fetching data for AS{asn} from peering DB, Can take a while.. ")
     response = requests.request('GET',url)
     if response.status_code == 200:
         return response.json().get('data')
