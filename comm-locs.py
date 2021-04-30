@@ -40,7 +40,7 @@ def main():
         sys.exit(0)
         
     comm_list = list(set(all_list[0]).intersection(*all_list[1:]))
-    if len(comm_list) > 1:  
+    if len(comm_list) > 0:  
         print (f"\n### Found {len(comm_list)} overlapping exchanges ### \n ")
         for x in range(len(sys.argv[1:])):
             print("\nDetails for AS{}".format(sys.argv[1:][x]))
