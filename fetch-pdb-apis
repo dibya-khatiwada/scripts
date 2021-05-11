@@ -10,7 +10,7 @@ printf "\n"
 echo "###### Fetching Data from Peeringdb ######"
 
 for x in ${apis[@]}
-do  curl -sS -X GET -H 'authorization:<your_authorization_header>' https://peeringdb.com/api/$x -C - > ../data/$.json &
+do  curl -sS -X GET -H 'authorization:<your_authorization_header>' https://peeringdb.com/api/$x -C - > ../data/$x.json &
 done
 
 wait < <(jobs -p)
