@@ -1,0 +1,24 @@
+#!/bin/bash
+
+
+start=`date +%s`
+
+apis=(fac ix ixfac ixlan ixpfx net poc netfac netixlan org as_set)
+
+printf "\n"
+
+echo "###### Fetching Data from Peeringdb ######"
+
+for x in ${apis[@]}
+do  curl -sS -X GET -H 'authorization:<your_authorization_header>' https://peeringdb.com/api/$x -C - > ../data/$.json
+pids[${x}]=$!
+done
+
+wait < <(jobs -p)
+
+end=`date +%s`
+runtime=$((end-start))
+
+echo ""###### Completed: Time Taken: $runtime seconds "######"
+
+printf "\n"
